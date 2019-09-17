@@ -2,7 +2,6 @@
  *
  */
 import React, { Component } from 'react'
-import axios from 'axios'
 
 /* Step 2
  * Rename this class to reflect the component being created
@@ -26,10 +25,6 @@ export default class HelloWorld extends Component {
     *   -REMINDER remember `setState` it is an async function
     */
     componentDidMount() {
-        axios.get('/api/helloworld')
-            .then((res) => {
-                this.setState({message: res.data})
-            })
     }
 
     /* Step 5
@@ -42,7 +37,7 @@ export default class HelloWorld extends Component {
         return (
             <div>
                 {/* Accessing the value of message from the state object */}
-                <h1>{this.state.message}</h1>
+                <h1>Hello World</h1>
             </div>
         )
     }
