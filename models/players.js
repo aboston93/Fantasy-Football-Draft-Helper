@@ -65,7 +65,7 @@ const CreatePlayer = () =>
         
     })
 
-function getAllPLayers() {
+function getAllPlayers() {
     return PlayerCollection.find()
 }
 function addNewPlayer(newplayer) {
@@ -84,7 +84,7 @@ function DeletePlayer(animeid) {
 }
 
 
-function GetPLayer(playerid) {
+function GetPlayer(playerid) {
     return PlayerCollection.findById(playerid);
 }
 
@@ -97,17 +97,6 @@ function updatePlayer(playerid, updatedPlayer) {
 
     return PlayerCollection.findByIdAndUpdate(playerid, updatedPlayer)
 }
-
-
-
-
-
-
-
-
-
-
-
 //       const CreateAuthor = () =>
 //   AuthorCollection.create({ name: "One Punch Man", created: new Date(), genre: "Harem ", StartDate: new Date(),
 //   EndDate:new Date(), mainCharacter:"Saitama" , type:"shounen", creator:"mikashi" 
@@ -122,10 +111,10 @@ function updatePlayer(playerid, updatedPlayer) {
 //  */
 module.exports = {
     CreatePlayer,
-    getAllPLayers,
+    getAllPlayers,
     addNewPlayer,
     DeletePlayer,
-    GetPLayer,
+    GetPlayer,
     updatePlayer
 
 }

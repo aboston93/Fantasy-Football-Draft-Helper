@@ -16,7 +16,7 @@ const app = express()
  * import routers from controllers/
  *
  */
-const { templateRouter } = require('./controllers/template.js')
+const { playerRouter } = require('./controllers/players.js')
 
 
 /* Step 3
