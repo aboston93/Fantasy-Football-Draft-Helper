@@ -77,7 +77,7 @@ function addNewPlayer(newplayer) {
     return PlayerCollection.create(newplayer);
 }
 
-function DeletePlayer(animeid) {
+function DeletePlayer(playerid) {
 
     return PlayerCollection.deleteOne({ _id: playerid });
 
