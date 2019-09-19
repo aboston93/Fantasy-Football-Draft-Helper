@@ -30,8 +30,8 @@ const mongoose = require('./connection.js')
  *
  */
 let DetailSchema = mongoose.Schema({
-    Pros: String,
-    Cons: String,
+    pros: String,
+    cons: String,
     stats: String,
  
     
@@ -58,9 +58,10 @@ let DetailSchema = mongoose.Schema({
 // }
 const CreateDetail = () =>
 DetailCollection.create({
-        Pros: "Accurate Pocket passer on on great team",
-        Cons: "diffrent player when facing blitzes",
+        pros: "Accurate Pocket passer on on great team",
+        cons: "diffrent player when facing blitzes",
         stats: "500tds in a career",
+        
      
         
     })

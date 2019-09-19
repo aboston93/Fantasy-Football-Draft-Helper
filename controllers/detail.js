@@ -71,6 +71,14 @@ detailRouter.put("/:id", (req, res) => {
 
 })
 
+detailRouter.get("/:id", (req, res) => {
+    detailApi.GetDetail(req.params.id,req.body)
+        .then(x => res.send(x))
+
+    })
+            //create a View on the single account and send it to the user
+            //note: { account } the same as writing { account: account }
+    
 
 
 
@@ -87,6 +95,6 @@ detailRouter.put("/:id", (req, res) => {
 //   })
 
 module.exports = {
-    playerRouter,
+    detailRouter,
 
 }

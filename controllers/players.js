@@ -71,6 +71,11 @@ playerRouter.put("/:id", (req, res) => {
 
 })
 
+playerRouter.get("/:id", (req, res) => {
+    playerApi.GetPlayer(req.params.id,req.body)
+        .then(x => res.send(x))
+
+    })
 
 
 

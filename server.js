@@ -17,7 +17,7 @@ const app = express()
  *
  */
 const { playerRouter } = require('./controllers/players.js')
-
+const { detailRouter } = require('./controllers/detail.js')
 
 /* Step 3
  *
@@ -50,7 +50,7 @@ app.use(express.static(`${__dirname}/client/build`))
  * the paths defined in the router.
  */
 app.use('/fantasy', playerRouter)
-
+app.use('/detail', detailRouter)
 /* Step 5
  *
  * add catch all route to serve up the built react app for any request not made to our
