@@ -30,9 +30,10 @@ const mongoose = require('./connection.js')
  *
  */
 let PlayerSchema = mongoose.Schema({
-    name: String,
+    Name: String,
+    Surname:String,
     Rank: Number,
-    Position: String,
+    position: String,
     Yearspro: Number,
     
 });
@@ -58,9 +59,10 @@ let PlayerSchema = mongoose.Schema({
 // }
 const CreatePlayer = () =>
     PlayerCollection.create({
-        name: "Ezekiell Elliot",
+        Name: "Ezekiell ",
+        Surname: "elliot",
         Rank: 1,
-        Position: "Running Back",
+        position: "Running Back",
         Yearspro: 3,
         
     })

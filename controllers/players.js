@@ -48,7 +48,7 @@ const playerRouter = express.Router()
 
 //     })
 playerRouter.get("/fantasylist", (req, res) => {
-    playerApi.getAllPlayers().then(x =>
+    playerApi.getAllPlayers(req.body).then(x =>
         res.send(x))
 })
 
