@@ -5,10 +5,33 @@ import './App.css';
 import Playeradd from './components/player'
 import React, { Component } from 'react'
 
+const Player = ({ Name, Surname, Rank, position, Yearspro }) =>
+    (<li>{Name} - {Surname}- {Rank}-{position}-{Yearspro}</li>)
+// all platers into a table
+const Players = (players) => (
+    <ul>
+        {players.map(Player)}
+        {/* assignments.map(x => assignment(x)) */}
+    </ul>
+)
 // getFantasyList = () => 
 //   fetch('/fantasy/fantasylist')
 //   .then(res => res.json())
 // single player componet
+
+
+
+const getAllPlayer = () =>
+  fetch('fantasy/fantasylist')
+    .then(res => res.json())
+    .catch(() => []) //if an error occurs then return an Promise that resolves to an empty array
+
+
+
+const getPlayer= (_id) =>
+  fetch(`/fantasy/${_id}`)
+    .then(res => res.json())
+    .catch(() => [])
 
 
 
@@ -17,42 +40,39 @@ import React, { Component } from 'react'
 
 export default class App extends Component {
   state =  
-    { course: 
-        { name : "Test Course 1"
-        , assignments: 
-            [ {name: "first  assignment", grade: 100}
-            , {name: "second assignment", grade:  90}
-            , {name: "third  assignment", grade:  80}
+    { 
+        
+         players: 
+            [ {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3},
+            {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3},
+            {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3},
+            {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3},
+            {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3}
             ]
-        }
+        
     }
 
-  componentDidMount() {
-    this.getAppCourseWork()
+  componentWillMount() {
+    this.getAllPlayers().then(players => this.setState({players}))
   }
 
-  getAppCourseWork() {
-    getFirstCourseWork()
-      .then(course => getAssignmentsForCourse(course))
-      .then(course => {
-        this.setState({ course: {...course} })
-      })
+  getAllPlayers() {
+   return( fetch("/fantasy/fantasylist")
+    .then(res => res.json())
+   )
+      
   }
 
-  addNewAssignment = (createdAssignment) => {
 
-    createdAssignment.grade = Number.parseInt(createdAssignment.grade)
-    createdAssignment.courseworkId = this.state.course._id
-
-    saveAssignment(createdAssignment)
-      .then(() => this.getAppCourseWork())
-  }
+  // savePlayer () {
+  //   (createdPlayer) .then(() => this.getAppCourseWork())
+  // }
 
   render() {
     return (
       <div>
-        <NewAssignmentForm addAssignment={this.addNewAssignment}/>
-        {course(this.state.course)}
+        <Playeradd addPlayer={this.addPlayer}/>
+        {Players(this.state.players)}
       </div>
     )
   }
