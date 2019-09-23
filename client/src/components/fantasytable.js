@@ -6,20 +6,22 @@ export default function MaterialTableDemo() {
     columns: [
       { title: 'Name', field: 'name' },
       { title: 'Surname', field: 'surname' },
-      { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
+      { title: 'years pro', field: 'yearpro', type: 'numeric' },
+      { title: 'Team', field: 'team',  },
       {
-        title: 'Birth Place',
-        field: 'birthCity',
-        lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
+        title: 'position',
+        field: 'position',
+        lookup: { 34: 'QB', 63: 'WR' },
       },
     ],
     data: [
-      { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
+      { name: 'Mehmet', surname: 'Baran', yearpro: 2,team:"Patriots", position: 63 },
       {
         name: 'Zerya Betül',
         surname: 'Baran',
-        birthYear: 2017,
-        birthCity: 34,
+        yearpro: 3,
+        team:"Patriots",
+        position: 34,
       },
     ],
   });
