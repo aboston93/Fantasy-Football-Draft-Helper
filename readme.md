@@ -1,32 +1,35 @@
-# mern-template-project
+sei23-Project3
+Boston  team drafting guide
 
-# Setup A New Project From This Template
+Deployed App
+Project Board
+Technologies Used:
+React
+Python
+Django
+Material UI
+CSS
+V2 Goals:
+Sort and be able to search artists by Location/Genre
+Alphabetically sort results (artists)
+Have a "featured list" where top artists can somehow be ranked and displayed first
+Set up some kind of player whether it's spotify embeded links or something else.
+Implement some kind of image/file upload system
+ERD
+ERD
 
-If you are starting a new project do the following:
+Wireframes
+<img src=""/>
+Home
 
-1. copy/download this directory to where you new project is located and rename
-   it to the name of your project.
-1. change your directory (`cd`) into the copied project template
-1. `npm install`
-1. `npm run dev`
-1. Open a new browser window and navigate to the URL http://localhost:3000/
-    here you should see `hello world` displayed after page load
-    updates should show up here automatically
-1. see the `client/src` `readme.md` file for more information on the react project
+Artist Detail
 
-# Setup A New Project Without This Template
+Show List
 
-If you want to start a project without using this template directory do the
-following:
+Show Detail
 
+Merch List
 
-1. `mkdir <project-name>`
-1. `cd <project-name>`
-1. `echo "# <project-name>" > readme.md`
-1. `git init`
-1. `git add readme.md `
-1. `git commit -m "init repo with readme.md"`
-1. `npm init`
-1. `mkdir models views controllers`
-1. `touch ./server.js`
-# Fantasy-Football-Draft-Helper
+Merch Detail
+
+© 2019 GitHub, Inc.
