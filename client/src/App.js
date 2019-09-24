@@ -18,7 +18,16 @@ const Players = (players) => (
 //   fetch('/fantasy/fantasylist')
 //   .then(res => res.json())
 // single player componet
+const Detail  = ({ pros, cons, stats,  }) =>
+    (<li>{pros} - {cons}- {stats}</li>)
 
+// all platers into a table
+const Details = (players) => (
+    <ul>
+        {players.map(Player)}
+        {/* assignments.map(x => assignment(x)) */}
+    </ul>
+)
 
 
 const getAllPlayer = () =>
@@ -34,7 +43,18 @@ const getPlayer= (_id) =>
     .catch(() => [])
 
 
-
+    const getAllDetail = () =>
+    fetch('fantasy/fantasylist')
+      .then(res => res.json())
+      .catch(() => []) //if an error occurs then return an Promise that resolves to an empty array
+  
+  
+  
+  const getDetailr= (detailid) =>
+    fetch(`/detail/${detailid}`)
+      .then(res => res.json())
+      .catch(() => [])
+  
 
 
 
@@ -43,11 +63,8 @@ export default class App extends Component {
     { 
         
          players: 
-            [ {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3},
-            {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3},
-            {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3},
-            {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3},
-            {Name:"Tom", Surname:"Brady", Rank:1, position:"QB", Yearspro:3}
+            [ {pros:" ",cons:"", stats:""},
+            
             ]
         
     }
@@ -63,7 +80,14 @@ export default class App extends Component {
       
   }
 
+  getAllDetails() {
+    return( fetch("/detail/fantasylist")
+     .then(res => res.json())
+    )
+       
+   }
 
+   
   // savePlayer () {
   //   (createdPlayer) .then(() => this.getAppCourseWork())
   // }
