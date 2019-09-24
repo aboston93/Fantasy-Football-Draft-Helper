@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import Playeradd from './components/player'
 import React, { Component } from 'react'
+import Detailadd from './components/detail'
+import Teamadd  from "./components/team"
 
 const Player = ({ Name, Surname, Rank, position, Yearspro }) =>
     (<li>{Name} - {Surname}- {Rank}-{position}-{Yearspro}</li>)
@@ -22,9 +24,20 @@ const Detail  = ({ pros, cons, stats,  }) =>
     (<li>{pros} - {cons}- {stats}</li>)
 
 // all platers into a table
-const Details = (players) => (
+const Details = (details) => (
     <ul>
-        {players.map(Player)}
+        {details.map(Detail)}
+        {/* assignments.map(x => assignment(x)) */}
+    </ul>
+)
+
+const team  = ({ team, teamstats,   }) =>
+    (<li>{team} - {teamstats}</li>)
+
+// all platers into a table
+const teams = (teams) => (
+    <ul>
+        {teams.map(team)}
         {/* assignments.map(x => assignment(x)) */}
     </ul>
 )
@@ -44,13 +57,13 @@ const getPlayer= (_id) =>
 
 
     const getAllDetail = () =>
-    fetch('fantasy/fantasylist')
+    fetch('detail/fantasylist')
       .then(res => res.json())
       .catch(() => []) //if an error occurs then return an Promise that resolves to an empty array
   
   
   
-  const getDetailr= (detailid) =>
+  const getDetail= (detailid) =>
     fetch(`/detail/${detailid}`)
       .then(res => res.json())
       .catch(() => [])
@@ -62,8 +75,10 @@ export default class App extends Component {
   state =  
     { 
         
-         players: 
-            [ {pros:" ",cons:"", stats:""},
+         players: [
+         {Name:"",  Surname:" ",Rank:0, position:"", Yearspro:0},
+            {pros:" ",cons:"", stats:""},
+            {team:"", teamstats:""}
             
             ]
         
@@ -71,6 +86,9 @@ export default class App extends Component {
 
   componentWillMount() {
     this.getAllPlayers().then(players => this.setState({players}))
+    this.getAllDetails().then(details => this.setState({details}))
+    this.getAllTeams().then(teams => this.setState({teams}))
+    
   }
 
   getAllPlayers() {
@@ -86,7 +104,12 @@ export default class App extends Component {
     )
        
    }
-
+   getAllTeams() {
+    return( fetch("/team/fantasylist")
+     .then(res => res.json())
+    )
+       
+   }
    
   // savePlayer () {
   //   (createdPlayer) .then(() => this.getAppCourseWork())
@@ -97,6 +120,10 @@ export default class App extends Component {
       <div>
         <Playeradd addPlayer={this.addPlayer}/>
         {Players(this.state.players)}
+        <Detailadd addPlayer= {this.addplayer}/>
+        {Details(this.state.Details)}
+        <Teamadd addPlayer= {this.addplayer}/>
+        {teams(this.state.teams)}
       </div>
     )
   }
