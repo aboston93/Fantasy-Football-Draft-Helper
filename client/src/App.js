@@ -121,9 +121,9 @@ export default class App extends Component {
         <Playeradd addPlayer={this.addPlayer}/>
         {Players(this.state.players)}
         <Detailadd addPlayer= {this.addplayer}/>
-        {Details(this.state.Details)}
+        {Details(this.state.players)}
         <Teamadd addPlayer= {this.addplayer}/>
-        {teams(this.state.teams)}
+        {teams(this.state.players)}
       </div>
     )
   }
