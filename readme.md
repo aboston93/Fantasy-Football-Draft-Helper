@@ -18,9 +18,13 @@ Implement some kind of image/file upload system
 
 
 Wireframes
-<img src="/images/IMG_2911.JPG"/>
 ERD 
-<img src = "/images/IMG_2912.JPG"/>
+[
+![IMG_2911](https://user-images.githubusercontent.com/4977418/65515070-93632400-deac-11e9-85c6-1f215241f494.JPG)
+![IMG_2912](https://user-images.githubusercontent.com/4977418/65515076-978f4180-deac-11e9-9f48-7e8394d09348.JPG)
+
+](url)
+
 
 <h1>Artist Detail</h1>
 
