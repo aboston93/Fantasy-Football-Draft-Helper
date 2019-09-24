@@ -1,5 +1,5 @@
-sei23-Project3
-Boston  team drafting guide
+<h1>sei23-Project3</h1>
+<h3>Boston  team drafting guide</h3>
 
 Deployed App
 Project Board
@@ -22,14 +22,14 @@ Wireframes
 <img src=""/>
 Home
 
-Artist Detail
+<h1>Artist Detail</h1>
 
-Show List
+<h1>Show List</h1>
 
-Show Detail
+<h1>Show Detail</h1>
 
-Merch List
+<h1>Merch List</h1>
 
-Merch Detail
+<h1>Merch Detail</h1>
 
 © 2019 GitHub, Inc.

@@ -6,6 +6,7 @@ import Playeradd from './components/player'
 import React, { Component } from 'react'
 import Detailadd from './components/detail'
 import Teamadd  from "./components/team"
+import  {MaterialTableDemo} from "./components/fantasytable"
 
 const Player = ({ Name, Surname, Rank, position, Yearspro }) =>
     (<li>{Name} - {Surname}- {Rank}-{position}-{Yearspro}</li>)
@@ -124,6 +125,7 @@ export default class App extends Component {
         {Details(this.state.players)}
         <Teamadd addPlayer= {this.addplayer}/>
         {teams(this.state.players)}
+        {MaterialTableDemo}
       </div>
     )
   }
