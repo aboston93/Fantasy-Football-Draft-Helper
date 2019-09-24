@@ -1,5 +1,8 @@
-import React from 'react';
+
 import MaterialTable from 'material-table';
+import React, { Component } from 'react'
+
+
 
 
 export default function MaterialTableDemo() {

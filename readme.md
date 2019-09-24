@@ -15,12 +15,12 @@ Alphabetically sort results (artists)
 Have a "featured list" where top artists can somehow be ranked and displayed first
 Set up some kind of player whether it's spotify embeded links or something else.
 Implement some kind of image/file upload system
-ERD
-ERD
+
 
 Wireframes
-<img src=""/>
-Home
+<img src="/images/IMG_2911.JPG"/>
+ERD 
+<img src = "/images/IMG_2912.JPG"/>
 
 <h1>Artist Detail</h1>
 
