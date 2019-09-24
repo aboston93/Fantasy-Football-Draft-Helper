@@ -20,7 +20,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  /* color: #61dafb; */
 }
 
 @keyframes App-logo-spin {
@@ -31,7 +31,7 @@
     transform: rotate(360deg);
   }
 }
-/* body{color: black} */
+body{color: black}
 
 li{
   color: teal
