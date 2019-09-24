@@ -8,8 +8,8 @@ import Detailadd from './components/detail'
 import Teamadd  from "./components/team"
 
 
-const Player = ({ Name, Surname, Rank, position, Yearspro }) =>
-    (<li>{Name} - {Surname}- {Rank}-{position}-{Yearspro}</li>)
+const Player = ({ Name, Surname, Rank, position, Yearspro ,source}) =>
+    (<li>{Name} - {Surname}- {Rank}-{position}-{Yearspro}-{source}</li>)
 // all platers into a table
 const Players = (players) => (
     <ul>
@@ -77,7 +77,7 @@ export default class App extends Component {
     { 
         
          players: [
-         {Name:"",  Surname:" ",Rank:0, position:"", Yearspro:0},
+         {Name:"",  Surname:" ",Rank:0, position:"", Yearspro:0,source:""},
             {pros:" ",cons:"", stats:""},
             {team:"", teamstats:""}
             

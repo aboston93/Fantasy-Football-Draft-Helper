@@ -73,6 +73,12 @@ savePlayer(this.state.newPlayer)
                     onChange={this.handleTextInput}
                     placeholder="player Yearspro"
                 />
+                <input
+                    type="string"
+                    name="source"
+                    onChange={this.handleTextInput}
+                    placeholder="source"
+                />
                 <input type="submit" value="+" />
             </form>
         )

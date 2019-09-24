@@ -35,6 +35,7 @@ let PlayerSchema = mongoose.Schema({
     Rank: Number,
     position: String,
     Yearspro: Number,
+    source:String
     
 });
 
@@ -64,6 +65,7 @@ const CreatePlayer = () =>
         Rank: 1,
         position: "Running Back",
         Yearspro: 3,
+        source:""
         
     })
 
