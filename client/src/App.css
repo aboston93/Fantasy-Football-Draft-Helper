@@ -31,10 +31,10 @@
     transform: rotate(360deg);
   }
 }
-body{color: black}
+/* body{color: black} */
 
-/* li{
-  color: teal */
+li{
+  color: teal
 }
 
 
